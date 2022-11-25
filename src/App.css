@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&display=swap");
+
+@layer base {
+  html {
+    font-family: "Noto Sans TC", sans-serif;
+  }
+}
+
+.border-main {
+  border-image-slice: 60;
+  border-image-source: url(assets/img/border-image.svg);
+  border-image-width: 30px;
+}
+
+.border-btn {
+  border-image-slice: 40;
+  border-image-source: url(assets/img/btn-border-img.svg);
+  border-image-width: 20px;
+}
+
+.border-alert {
+  border-image-slice: 48;
+  border-image-source: url(assets/img/alert-border.svg);
+  border-image-width: 40px;
+}
+
+button {
+  white-space: nowrap;
+}
