@@ -8,17 +8,15 @@ const SprintList = ({ rate }) => {
   const { gotoPage } = Progress();
   return (
     <div className="bg-secondary bg-center bg-cover h-full p-3">
-      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
+      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center overflow-y-scroll">
         <div
           onClick={() => gotoPage("Teams2")}
           className="absolute cursor-pointer top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2"
         >
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
-        <div>
-          <div className="text-P1 flex items-center justify-center">
-            <ProgressBar rate={rate} />
-          </div>
+        <div className="text-P1 flex items-center justify-center mb-10">
+          <ProgressBar rate={rate} />
         </div>
         <div className="text-white max-w-[900px]">
           <div className="flex items-center mb-10">
@@ -74,7 +72,7 @@ const SprintList = ({ rate }) => {
               </p>
             </div>
           </div>
-          <div className="text-center mt-10">
+          <div className="text-center mt-10 mb-10">
             推薦工具：
             <a
               href="https://www.atlassian.com/wac/software/confluence?"

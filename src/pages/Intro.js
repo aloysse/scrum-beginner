@@ -6,7 +6,7 @@ const Intro = ({ rate }) => {
   const { gotoPage } = Progress();
   return (
     <div className="bg-main bg-center bg-cover h-full p-3 text-center">
-      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
+      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center overflow-y-scroll">
         <div>
           <h1 className="text-P1 text-6xl text-center font-thin mb-6">Hello</h1>
           <div className="text-P1 flex items-center justify-center">
