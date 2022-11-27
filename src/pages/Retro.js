@@ -17,7 +17,7 @@ const Retros = ({ rate }) => {
         isAnswer: false,
       },
       {
-        content: "大家在開發上都會互相Cover，讓任務都有準時在時間內完成。",
+        content: "大家在開發上都會互相 Cover，讓任務都有準時在時間內完成。",
         isChose: false,
         id: "2",
         isAnswer: true,
@@ -31,7 +31,7 @@ const Retros = ({ rate }) => {
         isAnswer: true,
       },
       {
-        content: "開發時間預估不準確，請後端下次改進，避免Delay到我。",
+        content: "開發時間預估不準確，請後端下次改進，避免 Delay 到我。",
         isChose: false,
         id: "4",
         isAnswer: false,
@@ -115,7 +115,7 @@ const Retros = ({ rate }) => {
                 Confluence 中。
               </p>
               <p>
-                請選擇適合 Retro的回饋卡！思考看看哪一張牌是『正面表述』呢？
+                請選擇適合 Retro 的回饋卡！思考看看哪一張牌是『正面表述』呢？
               </p>
             </div>
           </div>

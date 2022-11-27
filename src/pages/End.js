@@ -17,7 +17,7 @@ const End = ({ rate }) => {
         </div>
         <div className="flex leading-8 justify-center mt-10 text-xl text-white mb-10">
           <p>
-            恭喜通過 Scrum新手村！
+            恭喜通過 Scrum 新手村！
             <br />
             正式加入六角資訊的開發 A 組
           </p>

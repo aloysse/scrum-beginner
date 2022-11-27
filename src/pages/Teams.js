@@ -47,7 +47,7 @@ const Teams = ({ rate }) => {
             <p className="m-5 whitespace-nowrap">Tina</p>
             <div className="border rounded-2xl border-P2 py-3 px-6">
               <p>
-                產品待辦清單好了之後，我們來召集 ScrumMstr
+                產品待辦清單好了之後，我們來召集 Scrum Master
                 開發團隊共同召開短衝規劃會議 (Sprint
                 Planning)。短衝即是一個迭代，具有固定時間限制，我們會在這個會議中，決定要完哪些工作事項來達到商業需求，列出短衝待辦清單
                 (Sprint Backlog)，並由開發團隊在接下來的產品開發期裡執行。
@@ -60,8 +60,8 @@ const Teams = ({ rate }) => {
             <div className="border rounded-2xl border-P2 py-3 px-6">
               <p className="mb-3">
                 嗨嗨你是新來的前端吧！我是這次的 Scrum Master
-                Jason，我的工作主要是促成開發團隊成員協作、引導團隊進行自省會議，提升隊成員
-                Scrum瞭解。
+                Jason，我的工作主要是促成開發團隊成員協作、引導團隊進行自省會議，提升成員對
+                Scrum 的瞭解。
               </p>
               <p>
                 Allen 是我們開發團隊的成員唷！目前我們團隊一次 Sprint
