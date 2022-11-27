@@ -17,12 +17,15 @@ const Teams = ({ rate }) => {
     timeline
       .to("#tina", 0.8, { y: -50, opacity: 0, ease: "power3.out" })
       .to("#jason", 0.8, { y: -50, opacity: 0, ease: "power3.out" }, "<")
-      .to("#allen", 0.8, { opacity: 0, display: "flex", delay: -0.3 })
+      .to("#tina", { display: "none" }, "<")
+      .to("#jason", { display: "none" }, "<")
+      .to("#allen", 0.8, { opacity: 0, display: "flex" })
+
       .fromTo(
         "#allen",
         0.8,
-        { opacity: 0, y: -150 },
-        { opacity: 1, y: -200, ease: "power3.out" },
+        { opacity: 0 },
+        { opacity: 1, ease: "power3.out" },
         "<"
       );
     setGoNextPage(true);
