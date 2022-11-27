@@ -96,7 +96,7 @@ const Backlog = ({ rate }) => {
           </div>
           <div className="flex items-center text-white">
             <img src={girl1} alt="" />
-            <p className="m-5  whitespace-nowrap">小敏</p>
+            <p className="m-5  whitespace-nowrap">Tina</p>
             <div className="flex border rounded-2xl border-P2 py-3 px-6 items-center">
               <p className=" mr-16">
                 請試著把需求放到產品待辦清單，並調整待辦的優先度順序。
