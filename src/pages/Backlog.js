@@ -1,14 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 import arrowLeft from "../assets/img/arrow-left.svg";
 import girl1 from "../assets/img/girl1.svg";
 import jiraLogo from "../assets/img/Jira-logo.svg";
 import { Progress } from "../context/ProgressContext";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { nanoid } from "nanoid";
+import Card from "../components/Card";
 
 const Backlog = ({ rate }) => {
   const { gotoPage } = Progress();
+
+  //卡片元素
+  const [itemObj, setItemObj] = useState({
+    productBacklog: {
+      items: [
+        {
+          content: "前台職缺列表（職缺詳細內容、點選可發送應徵意願）",
+          id: nanoid(),
+          priority: "3",
+        },
+        { content: "應徵者的線上履歷編輯器", id: nanoid(), priority: "2" },
+        {
+          content: "會員系統（登入、註冊、權限管理）",
+          id: nanoid(),
+          priority: "1",
+        },
+        {
+          content: "後台職缺管理功能（資訊上架、下架、顯示應徵者資料）",
+          id: nanoid(),
+          priority: "4",
+        },
+      ],
+    },
+    sprintList: {
+      items: [],
+    },
+  });
+  const answerAry = ["1", "2", "3", "4"];
+  const [isOrderCorret, setIsOrderCorret] = useState(null);
+  const [displayAlert, setDisplayAlert] = useState(false);
+
+  const onDragEnd = (event) => {
+    const { source, destination } = event;
+
+    if (!destination) {
+      return;
+    }
+
+    // 拷貝新的items (來自state)
+    let newItemObj = { ...itemObj };
+
+    // splice(start, deleteCount, item )
+    // 從source剪下被拖曳的元素
+    const [remove] = newItemObj[source.droppableId].items.splice(
+      source.index,
+      1
+    );
+
+    // 在destination位置貼上被拖曳的元素
+    newItemObj[destination.droppableId].items.splice(
+      destination.index,
+      0,
+      remove
+    );
+
+    // set state新的 itemObj
+    setItemObj(newItemObj);
+
+    // 確認 backlog 順序
+    const checkSprintListOrder = () => {
+      const currentSprintListOrder = newItemObj.sprintList.items.map((ele) => {
+        return ele.priority;
+      });
+      return currentSprintListOrder.join("") === answerAry.join("")
+        ? true
+        : false;
+    };
+
+    setIsOrderCorret(checkSprintListOrder);
+  };
+
   return (
-    <div className="bg-secondary bg-center bg-cover h-full p-3">
+    <div className="bg-secondary bg-center bg-cover h-full p-3 ">
       <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
         <div className="absolute top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2">
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
@@ -31,39 +105,46 @@ const Backlog = ({ rate }) => {
           </div>
         </div>
         <div className="flex items-end">
-          <div className="mr-14">
-            <div className="flex">
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]">
-                <div className="bg-cardContent py-12 px-8 w-[190px] h-[253px] absolute">
-                  <p className="text-white">會員系統</p>
-                </div>
-              </div>
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]">
-                <div className="bg-cardContent py-12 px-8 w-[190px] h-[253px] absolute">
-                  <p className="text-white">會員系統</p>
-                </div>
-              </div>
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]">
-                <div className="bg-cardContent py-12 px-8 w-[190px] h-[253px] absolute">
-                  <p className="text-white">會員系統</p>
-                </div>
-              </div>
-              <div className="bg-placeBg relative w-[190px] h-[253px]">
-                <div className="bg-cardContent py-12 px-8 w-[190px] h-[253px] absolute">
-                  <p className="text-white">會員系統</p>
-                </div>
-              </div>
+          <DragDropContext onDragEnd={onDragEnd}>
+            <div className="mr-14">
+              <Droppable droppableId="productBacklog" direction="horizontal">
+                {(provided, snapshot) => (
+                  <div
+                    className="grid grid-cols-4 gap-4 h-[253px] w-[810px]"
+                    ref={provided.innerRef}
+                    {...provided.droppableProps}
+                  >
+                    {itemObj.productBacklog.items.map((item, index) => (
+                      <Card item={item} index={index} key={item.id} />
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
+              <hr className="my-8 border-P1" />
+
+              <Droppable droppableId="sprintList" direction="horizontal">
+                {(provided, snapshot) => (
+                  <div
+                    className="bg-placeAllBg bg-contain grid grid-cols-4 gap-4 h-[253px] w-[810px]"
+                    ref={provided.innerRef}
+                    {...provided.droppableProps}
+                  >
+                    {itemObj.sprintList.items.map((item, index) => (
+                      <Card item={item} index={index} key={item.id} />
+                    ))}
+                    {provided.placeholder}
+                  </div>
+                )}
+              </Droppable>
             </div>
-            <hr className="my-8 border-P1" />
-            <div className="flex">
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]"></div>
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]"></div>
-              <div className="bg-placeBg relative mr-5 w-[190px] h-[253px]"></div>
-              <div className="bg-placeBg relative w-[190px] h-[253px]"></div>
-            </div>
-          </div>
+          </DragDropContext>
           <button
-            onClick={() => gotoPage("Teams")}
+            onClick={
+              isOrderCorret
+                ? () => gotoPage("Teams")
+                : () => setDisplayAlert(true)
+            }
             className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
           >
             完成
@@ -71,10 +152,16 @@ const Backlog = ({ rate }) => {
         </div>
       </div>
       {/* alert */}
-      <div className="absolute w-full h-full top-0 bg-blackTrans flex items-center justify-center hidden">
+      <div
+        className="absolute w-full h-full top-0 bg-blackTrans items-center justify-center"
+        style={{ display: displayAlert ? "flex" : "none" }}
+      >
         <div className="text-white text-center bg-alertBg py-20 px-24 bg-center border-alert">
           <p className="mb-8">排序錯誤，請再調整順序</p>
-          <button className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 ">
+          <button
+            onClick={() => setDisplayAlert(false)}
+            className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 "
+          >
             確認
           </button>
         </div>

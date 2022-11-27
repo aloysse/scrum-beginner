@@ -19,6 +19,7 @@ module.exports = {
         cardBack: "url('assets/img/card-back.svg')",
         cardContent: "url('assets/img/card-content.svg')",
         placeBg: "url('assets/img/place-bg.svg')",
+        placeAllBg: "url('assets/img/place-all-bg.svg')",
         alertBg: "url('assets/img/alert-bg.svg')",
         cardStar: "url('assets/img/card-star.svg')",
         flow: "url('assets/img/flow.svg')",
