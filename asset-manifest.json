@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scrum-beginner/static/css/main.1b297db7.css",
-    "main.js": "/scrum-beginner/static/js/main.d395f163.js",
+    "main.css": "/scrum-beginner/static/css/main.6c746a5c.css",
+    "main.js": "/scrum-beginner/static/js/main.29c9cc0b.js",
     "static/media/bg.svg": "/scrum-beginner/static/media/bg.008df5d6d3271d8b5288.svg",
     "static/media/hero.svg": "/scrum-beginner/static/media/hero.2fc81ae748cec25fc32814c6774f62f9.svg",
     "static/media/place-all-bg.svg": "/scrum-beginner/static/media/place-all-bg.da144d61369bf56cb4f5.svg",
@@ -23,11 +23,11 @@
     "static/media/arrow-left.svg": "/scrum-beginner/static/media/arrow-left.4af92ca93c921570da0efaac8136c6df.svg",
     "static/media/btn-bg.svg": "/scrum-beginner/static/media/btn-bg.95b1b5004a1a9036bab7.svg",
     "static/media/bg2.svg": "/scrum-beginner/static/media/bg2.b76d0893d29619d19302.svg",
-    "main.1b297db7.css.map": "/scrum-beginner/static/css/main.1b297db7.css.map",
-    "main.d395f163.js.map": "/scrum-beginner/static/js/main.d395f163.js.map"
+    "main.6c746a5c.css.map": "/scrum-beginner/static/css/main.6c746a5c.css.map",
+    "main.29c9cc0b.js.map": "/scrum-beginner/static/js/main.29c9cc0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b297db7.css",
-    "static/js/main.d395f163.js"
+    "static/css/main.6c746a5c.css",
+    "static/js/main.29c9cc0b.js"
   ]
 }
