@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 import arrowLeft from "../assets/img/arrow-left.svg";
 import girl1 from "../assets/img/girl1.svg";
 import boy1 from "../assets/img/boy1.svg";
 import boy2 from "../assets/img/boy2.svg";
 import { Progress } from "../context/ProgressContext";
+import { gsap } from "gsap";
 
 const Teams = ({ rate }) => {
   const { gotoPage } = Progress();
+  const [goNextPage, setGoNextPage] = useState(false);
+
+  const timeline = gsap.timeline();
+
+  const animation = () => {
+    timeline
+      .to("#tina", 0.8, { y: -50, opacity: 0, ease: "power3.out" })
+      .to("#jason", 0.8, { y: -50, opacity: 0, ease: "power3.out" }, "<")
+      .to("#allen", 0.8, { opacity: 0, display: "flex", delay: -0.3 })
+      .fromTo(
+        "#allen",
+        0.8,
+        { opacity: 0, y: -150 },
+        { opacity: 1, y: -200, ease: "power3.out" },
+        "<"
+      );
+    setGoNextPage(true);
+  };
   return (
     <div className="bg-secondary bg-center bg-cover h-full p-3">
       <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
@@ -20,7 +39,7 @@ const Teams = ({ rate }) => {
           </div>
         </div>
         <div>
-          <div className="flex items-center text-white mb-10">
+          <div id="tina" className="flex items-center text-white mb-10">
             <img src={girl1} alt="" />
             <p className="m-5 whitespace-nowrap">Tina</p>
             <div className="border rounded-2xl border-P2 py-3 px-6">
@@ -32,7 +51,7 @@ const Teams = ({ rate }) => {
               </p>
             </div>
           </div>
-          <div className="flex items-center text-white mb-10">
+          <div id="jason" className="flex items-center text-white mb-10">
             <img src={boy1} alt="" />
             <p className="m-5 whitespace-nowrap">Jason</p>
             <div className="border rounded-2xl border-P2 py-3 px-6">
@@ -48,7 +67,7 @@ const Teams = ({ rate }) => {
               </p>
             </div>
           </div>
-          <div className="flex items-center text-white">
+          <div id="allen" className="items-center text-white hidden">
             <img src={boy2} alt="" />
             <p className="m-5 whitespace-nowrap">Allen</p>
             <div className="border rounded-2xl border-P2 py-3 px-6">
@@ -66,10 +85,10 @@ const Teams = ({ rate }) => {
           </div>
         </div>
         <button
-          onClick={() => gotoPage("Sprint")}
+          onClick={goNextPage ? () => gotoPage("Sprint") : () => animation()}
           className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
         >
-          好的請繼續說
+          {goNextPage ? "接受挑戰" : "好的請繼續說"}
         </button>
       </div>
       {/* alert */}
