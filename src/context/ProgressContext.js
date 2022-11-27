@@ -14,11 +14,10 @@ import End from "../pages/End";
 const ProgressContext = createContext();
 
 export const ProgressContextProvider = () => {
-  const [showComponent, setShowComponent] = useState("Retro");
+  const [showComponent, setShowComponent] = useState("");
 
   const gotoPage = (pageName) => {
     setShowComponent(pageName);
-    console.log(showComponent);
   };
 
   const renderConpnent = () => {

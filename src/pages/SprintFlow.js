@@ -110,7 +110,10 @@ const SprintFlow = ({ rate }) => {
   return (
     <div className="bg-secondary bg-center bg-cover h-full p-3">
       <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
-        <div className="absolute top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2">
+        <div
+          onClick={() => gotoPage("SprintList")}
+          className="absolute cursor-pointer top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2"
+        >
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
         <div>
