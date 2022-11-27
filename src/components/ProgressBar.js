@@ -1,9 +1,7 @@
 import React from "react";
-import { Progress } from "../context/ProgressContext";
 
 const ProgressBar = ({ rate }) => {
   let percentage = Math.floor((rate / 9) * 100).toString();
-  console.log(percentage);
   return (
     <>
       <p>
