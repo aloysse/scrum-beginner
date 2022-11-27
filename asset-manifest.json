@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/scrum-beginner/static/css/main.1b297db7.css",
+    "main.js": "/scrum-beginner/static/js/main.d395f163.js",
+    "static/media/bg.svg": "/scrum-beginner/static/media/bg.008df5d6d3271d8b5288.svg",
+    "static/media/hero.svg": "/scrum-beginner/static/media/hero.2fc81ae748cec25fc32814c6774f62f9.svg",
+    "static/media/place-all-bg.svg": "/scrum-beginner/static/media/place-all-bg.da144d61369bf56cb4f5.svg",
+    "static/media/girl1.svg": "/scrum-beginner/static/media/girl1.da538db005a67bc9f41ef940e2d6fb74.svg",
+    "static/media/boy2.svg": "/scrum-beginner/static/media/boy2.f514ddf26f8b8725d434ee074f8dc326.svg",
+    "static/media/boy1.svg": "/scrum-beginner/static/media/boy1.861a6c85c15e9e8ab49f85c13ad4863d.svg",
+    "static/media/card-back.svg": "/scrum-beginner/static/media/card-back.d56316fbecb3932be618125d403d24a3.svg",
+    "static/media/card-content.svg": "/scrum-beginner/static/media/card-content.8d2a07fc9f843c2beccf.svg",
+    "static/media/place-bg.svg": "/scrum-beginner/static/media/place-bg.ada0c59fc62de8d4c17e.svg",
+    "static/media/alert-bg.svg": "/scrum-beginner/static/media/alert-bg.e8662ec6d35a64d98cd1.svg",
+    "static/media/Concluence-logo.svg": "/scrum-beginner/static/media/Concluence-logo.747396e67b4d2d4906bbd5d837623fb4.svg",
+    "static/media/btn-border-img.svg": "/scrum-beginner/static/media/btn-border-img.b6c4dd101396ad82874d.svg",
+    "static/media/flow.svg": "/scrum-beginner/static/media/flow.f4e862e248c4fefa141705967069f471.svg",
+    "static/media/Jira-logo.svg": "/scrum-beginner/static/media/Jira-logo.7d0e5346096a72b51168c256246aa4e0.svg",
+    "static/media/alert-border.svg": "/scrum-beginner/static/media/alert-border.fca8946b62cd57847b10.svg",
+    "static/media/border-image.svg": "/scrum-beginner/static/media/border-image.4f02e4366eecd6ecf81c.svg",
+    "static/media/card-star.svg": "/scrum-beginner/static/media/card-star.18e65566d41f642e04f9.svg",
+    "index.html": "/scrum-beginner/index.html",
+    "static/media/arrow-left.svg": "/scrum-beginner/static/media/arrow-left.4af92ca93c921570da0efaac8136c6df.svg",
+    "static/media/btn-bg.svg": "/scrum-beginner/static/media/btn-bg.95b1b5004a1a9036bab7.svg",
+    "static/media/bg2.svg": "/scrum-beginner/static/media/bg2.b76d0893d29619d19302.svg",
+    "main.1b297db7.css.map": "/scrum-beginner/static/css/main.1b297db7.css.map",
+    "main.d395f163.js.map": "/scrum-beginner/static/js/main.d395f163.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b297db7.css",
+    "static/js/main.d395f163.js"
+  ]
+}
