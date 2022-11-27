@@ -14,7 +14,7 @@ import End from "../pages/End";
 const ProgressContext = createContext();
 
 export const ProgressContextProvider = () => {
-  const [showComponent, setShowComponent] = useState("");
+  const [showComponent, setShowComponent] = useState("Retro");
 
   const gotoPage = (pageName) => {
     setShowComponent(pageName);
