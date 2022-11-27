@@ -75,17 +75,8 @@ const SprintList = ({ rate }) => {
           onClick={() => gotoPage("SprintFlow")}
           className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
         >
-          好的請繼續說
+          我瞭解了
         </button>
-      </div>
-      {/* alert */}
-      <div className="absolute w-full h-full top-0 bg-blackTrans flex items-center justify-center hidden">
-        <div className="text-white text-center bg-alertBg py-20 px-24 bg-center border-alert">
-          <p className="mb-8">排序錯誤，請再調整順序</p>
-          <button className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 ">
-            確認
-          </button>
-        </div>
       </div>
     </div>
   );
