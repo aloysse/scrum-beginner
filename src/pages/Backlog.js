@@ -157,7 +157,11 @@ const Backlog = ({ rate }) => {
         style={{ display: displayAlert ? "flex" : "none" }}
       >
         <div className="text-white text-center bg-alertBg py-20 px-24 bg-center border-alert">
-          <p className="mb-8">排序錯誤，請再調整順序</p>
+          <p className="mb-8">
+            {isOrderCorret === null
+              ? "請將上方待辦清單依優先順序排在下方格子"
+              : "排序錯誤，請再調整順序"}{" "}
+          </p>
           <button
             onClick={() => setDisplayAlert(false)}
             className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 "
