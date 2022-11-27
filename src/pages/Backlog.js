@@ -103,7 +103,13 @@ const Backlog = ({ rate }) => {
                 <br />
                 我們公司也推薦使用 Jira 來做任務的管理呢！
               </p>
-              <img className="h-12" src={jiraLogo} alt="" />
+              <a
+                href="https://www.atlassian.com/software/jira"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className="h-12" src={jiraLogo} alt="" />
+              </a>
             </div>
           </div>
         </div>

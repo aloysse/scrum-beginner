@@ -71,7 +71,13 @@ const SprintList = ({ rate }) => {
           </div>
           <div className="text-center mt-10">
             推薦工具：
-            <img className="inline-block" src={confluenceLogo} alt="" />
+            <a
+              href="https://www.atlassian.com/wac/software/confluence?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img className="inline-block" src={confluenceLogo} alt="" />
+            </a>
           </div>
         </div>
         <button
