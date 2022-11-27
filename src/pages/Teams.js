@@ -39,7 +39,7 @@ const Teams = ({ rate }) => {
         >
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
-        <div>
+        <div className="mb-10">
           <div className="text-P1 flex items-center justify-center">
             <ProgressBar rate={rate} />
           </div>

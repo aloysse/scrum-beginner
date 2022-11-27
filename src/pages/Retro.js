@@ -100,7 +100,7 @@ const Retros = ({ rate }) => {
         >
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
-        <div>
+        <div className="mb-10">
           <div className="text-P1 flex items-center justify-center mb-5">
             <ProgressBar rate={rate} />
           </div>
@@ -120,7 +120,7 @@ const Retros = ({ rate }) => {
             </div>
           </div>
         </div>
-        <div className="flex text-white">
+        <div className="flex text-white mb-10">
           <div className="mr-20">
             <h3 className="text-center mb-10">做得好的地方</h3>
             <div className="flex">
