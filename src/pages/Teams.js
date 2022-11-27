@@ -41,7 +41,7 @@ const Teams = ({ rate }) => {
             <ProgressBar rate={rate} />
           </div>
         </div>
-        <div>
+        <div className="max-w-[900px]">
           <div id="tina" className="flex items-center text-white mb-10">
             <img src={girl1} alt="" />
             <p className="m-5 whitespace-nowrap">Tina</p>

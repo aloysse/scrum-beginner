@@ -20,7 +20,7 @@ const Teams2 = ({ rate }) => {
             <ProgressBar rate={rate} />
           </div>
         </div>
-        <div>
+        <div className="max-w-[900px]">
           <div className="flex items-center text-white">
             <img src={boy2} alt="" />
             <p className="m-5 whitespace-nowrap">Allen</p>

@@ -117,10 +117,10 @@ const SprintFlow = ({ rate }) => {
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
         <div>
-          <div className="text-P1 flex items-center justify-center">
+          <div className="text-P1 flex items-center justify-center mb-5">
             <ProgressBar rate={rate} />
           </div>
-          <div className="flex items-center text-white">
+          <div className="flex items-center text-white max-w-[900px]">
             <img src={boy2} alt="" />
             <p className="m-5 whitespace-nowrap">Allen</p>
             <div>

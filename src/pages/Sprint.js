@@ -141,6 +141,7 @@ const Sprint = ({ rate }) => {
             </div>
           </div>
         </DragDropContext>
+        <div className="w-[200px]"></div>
         <button
           onClick={
             totalScoreSum > 20 || totalScoreSum === 0
@@ -149,7 +150,7 @@ const Sprint = ({ rate }) => {
           }
           className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
         >
-          準備好了!開始Sprint
+          準備好了！開始Sprint
         </button>
       </div>
       {/* alert */}

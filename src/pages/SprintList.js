@@ -20,7 +20,7 @@ const SprintList = ({ rate }) => {
             <ProgressBar rate={rate} />
           </div>
         </div>
-        <div className="text-white">
+        <div className="text-white max-w-[900px]">
           <div className="flex items-center mb-10">
             <div className="bg-P3 border border-P1 mr-6 py-3 px-8 min-w-[220px] text-center rounded-xl">
               <h3>
