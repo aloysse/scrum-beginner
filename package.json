@@ -1,5 +1,6 @@
 {
   "name": "scrum-beginner",
+  "homepage" : "https://aloysse.github.io/scrum-beginner",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
