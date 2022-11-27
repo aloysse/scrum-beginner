@@ -1,10 +1,24 @@
 import React from "react";
+import { Progress } from "../context/ProgressContext";
 
-const ProgressBar = () => {
+const ProgressBar = ({ rate }) => {
+  let percentage = Math.floor((rate / 9) * 100).toString();
+  console.log(percentage);
   return (
-    <div className="w-[480px] bg-barContainer mx-3">
-      <div className=" h-[8px] w-[50%] bg-P1"></div>
-    </div>
+    <>
+      <p>
+        0 <span className=" text-xs">%</span>
+      </p>
+      <div className="w-[480px] bg-barContainer mx-3">
+        <div
+          className="h-[8px] bg-P1"
+          style={{ width: `${percentage}%` }}
+        ></div>
+      </div>
+      <p>
+        100 <span className=" text-xs">%</span>
+      </p>
+    </>
   );
 };
 

@@ -1,23 +1,20 @@
 import React from "react";
 import ProgressBar from "../components/ProgressBar";
 import arrowLeft from "../assets/img/arrow-left.svg";
-import girl1 from "../assets/img/girl1.svg";
-import boy1 from "../assets/img/boy1.svg";
-import boy2 from "../assets/img/boy2.svg";
 import confluenceLogo from "../assets/img/Concluence-logo.svg";
+import { Progress } from "../context/ProgressContext";
 
-const SprintList = () => {
+const SprintList = ({ rate }) => {
+  const { gotoPage } = Progress();
   return (
     <div className="bg-secondary bg-center bg-cover h-full p-3">
-      <div class="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
+      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
         <div className="absolute top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2">
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
         <div>
           <div className="text-P1 flex items-center justify-center">
-            <div>01</div>
-            <ProgressBar />
-            <div>09</div>
+            <ProgressBar rate={rate} />
           </div>
         </div>
         <div className="text-white">
@@ -74,7 +71,10 @@ const SprintList = () => {
             <img className="inline-block" src={confluenceLogo} alt="" />
           </div>
         </div>
-        <button className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl">
+        <button
+          onClick={() => gotoPage("SprintFlow")}
+          className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
+        >
           好的請繼續說
         </button>
       </div>

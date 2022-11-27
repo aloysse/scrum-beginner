@@ -3,19 +3,19 @@ import ProgressBar from "../components/ProgressBar";
 import arrowLeft from "../assets/img/arrow-left.svg";
 import girl1 from "../assets/img/girl1.svg";
 import jiraLogo from "../assets/img/Jira-logo.svg";
+import { Progress } from "../context/ProgressContext";
 
-const Backlog = () => {
+const Backlog = ({ rate }) => {
+  const { gotoPage } = Progress();
   return (
     <div className="bg-secondary bg-center bg-cover h-full p-3">
-      <div class="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
+      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
         <div className="absolute top-[50px] flex justify-center items-center w-12 h-12 left-[50px] rounded-full border-P1 border-2">
           <img className="w-[20%] -translate-x-px" src={arrowLeft} alt="" />
         </div>
         <div>
           <div className="text-P1 flex items-center justify-center">
-            <div>01</div>
-            <ProgressBar />
-            <div>09</div>
+            <ProgressBar rate={rate} />
           </div>
           <div className="flex items-center text-white">
             <img src={girl1} alt="" />
@@ -62,7 +62,10 @@ const Backlog = () => {
               <div className="bg-placeBg relative w-[190px] h-[253px]"></div>
             </div>
           </div>
-          <button className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl">
+          <button
+            onClick={() => gotoPage("Teams")}
+            className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
+          >
             完成
           </button>
         </div>

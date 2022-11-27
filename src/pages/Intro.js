@@ -1,16 +1,16 @@
 import React from "react";
 import ProgressBar from "../components/ProgressBar";
+import { Progress } from "../context/ProgressContext";
 
-const Intro = () => {
+const Intro = ({ rate }) => {
+  const { gotoPage } = Progress();
   return (
     <div className="bg-main bg-center bg-cover h-full p-3 text-center">
-      <div class="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
+      <div className="border-main h-full pt-20 pb-16 px-10 flex flex-col justify-between items-center">
         <div>
           <h1 className="text-P1 text-6xl text-center font-thin mb-6">Hello</h1>
           <div className="text-P1 flex items-center justify-center">
-            <div>01</div>
-            <ProgressBar />
-            <div>09</div>
+            <ProgressBar rate={rate} />
           </div>
         </div>
         <div className="flex leading-8 justify-center max-w-[800px] mb-5 text-left text-xl text-white">
@@ -25,7 +25,10 @@ const Intro = () => {
           </p>
         </div>
         <div>
-          <button className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl">
+          <button
+            onClick={() => gotoPage("Start")}
+            className="border-btn hover:bg-btn hover:text-[#333333] bg-cover tracking-widest text-P1 py-1 px-8 text-xl"
+          >
             接受挑戰
           </button>
         </div>
