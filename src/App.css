@@ -10,18 +10,21 @@
 }
 
 .border-main {
+  border: 9px solid;
   border-image-slice: 60;
   border-image-source: url(assets/img/border-image.svg);
   border-image-width: 30px;
 }
 
 .border-btn {
+  border: 2px solid;
   border-image-slice: 40;
   border-image-source: url(assets/img/btn-border-img.svg);
   border-image-width: 20px;
 }
 
 .border-alert {
+  border: 2px solid;
   border-image-slice: 48;
   border-image-source: url(assets/img/alert-border.svg);
   border-image-width: 40px;
