@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/scrum-beginner/static/css/main.6082a1dd.css",
+    "main.css": "/scrum-beginner/static/css/main.01d42082.css",
     "main.js": "/scrum-beginner/static/js/main.b3608d28.js",
     "static/media/bg.svg": "/scrum-beginner/static/media/bg.008df5d6d3271d8b5288.svg",
     "static/media/hero.svg": "/scrum-beginner/static/media/hero.2fc81ae748cec25fc32814c6774f62f9.svg",
@@ -23,11 +23,11 @@
     "static/media/arrow-left.svg": "/scrum-beginner/static/media/arrow-left.4af92ca93c921570da0efaac8136c6df.svg",
     "static/media/btn-bg.svg": "/scrum-beginner/static/media/btn-bg.95b1b5004a1a9036bab7.svg",
     "static/media/bg2.svg": "/scrum-beginner/static/media/bg2.b76d0893d29619d19302.svg",
-    "main.6082a1dd.css.map": "/scrum-beginner/static/css/main.6082a1dd.css.map",
+    "main.01d42082.css.map": "/scrum-beginner/static/css/main.01d42082.css.map",
     "main.b3608d28.js.map": "/scrum-beginner/static/js/main.b3608d28.js.map"
   },
   "entrypoints": [
-    "static/css/main.6082a1dd.css",
+    "static/css/main.01d42082.css",
     "static/js/main.b3608d28.js"
   ]
 }
